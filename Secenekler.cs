@@ -22,5 +22,7 @@ namespace garantiTakip
             AnasayfaFrm frm = new AnasayfaFrm();
             frm.Show();
         }
+
+       
     }
 }
