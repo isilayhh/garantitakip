@@ -35,7 +35,9 @@ namespace garantiTakip
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSil = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.deneme = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +53,11 @@ namespace garantiTakip
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // BtnEkle
             // 
-            this.BtnEkle.Location = new System.Drawing.Point(367, 176);
+            this.BtnEkle.Location = new System.Drawing.Point(738, 63);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(75, 31);
             this.BtnEkle.TabIndex = 1;
@@ -81,7 +84,7 @@ namespace garantiTakip
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(457, 176);
+            this.BtnSil.Location = new System.Drawing.Point(738, 112);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(87, 31);
             this.BtnSil.TabIndex = 4;
@@ -91,7 +94,7 @@ namespace garantiTakip
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(551, 176);
+            this.BtnGuncelle.Location = new System.Drawing.Point(738, 161);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(90, 31);
             this.BtnGuncelle.TabIndex = 5;
@@ -99,21 +102,40 @@ namespace garantiTakip
             this.BtnGuncelle.UseVisualStyleBackColor = true;
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // deneme
+            // textBox2
             // 
-            this.deneme.AutoSize = true;
-            this.deneme.Location = new System.Drawing.Point(64, 25);
-            this.deneme.Name = "deneme";
-            this.deneme.Size = new System.Drawing.Size(52, 21);
-            this.deneme.TabIndex = 6;
-            this.deneme.Text = "label2";
+            this.textBox2.Location = new System.Drawing.Point(367, 73);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(274, 28);
+            this.textBox2.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(279, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 21);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "IND:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(558, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 28);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Temizle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmSektor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 591);
-            this.Controls.Add(this.deneme);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.label1);
@@ -139,6 +161,8 @@ namespace garantiTakip
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.Button BtnGuncelle;
-        private System.Windows.Forms.Label deneme;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
