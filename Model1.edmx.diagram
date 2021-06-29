@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e321195d70184b599618b5fe93d4cc7c" Name="Diagram1" ZoomLevel="61">
+      <Diagram DiagramId="e321195d70184b599618b5fe93d4cc7c" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="stajyerModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="stajyerModel.tbl_baslangicBitisTarih" Width="1.5" PointX="0.75" PointY="10.75" />
         <EntityTypeShape EntityType="stajyerModel.tbl_cari" Width="1.5" PointX="3" PointY="1.25" />
