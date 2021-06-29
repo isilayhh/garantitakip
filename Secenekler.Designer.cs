@@ -123,7 +123,6 @@ namespace garantiTakip
             this.button7.TabIndex = 9;
             this.button7.Text = "Garanti Durum";
             this.button7.UseVisualStyleBackColor = true;
-        
             // 
             // Secenekler
             // 
