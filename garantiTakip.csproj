@@ -74,6 +74,12 @@
     <Compile Include="FrmAra.Designer.cs">
       <DependentUpon>FrmAra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHizmetTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHizmetTuru.Designer.cs">
+      <DependentUpon>frmHizmetTuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSatısEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAra.resx">
       <DependentUpon>FrmAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHizmetTuru.resx">
+      <DependentUpon>frmHizmetTuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSatısEkle.resx">
       <DependentUpon>FrmSatısEkle.cs</DependentUpon>
