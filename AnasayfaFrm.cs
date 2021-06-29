@@ -87,6 +87,38 @@ namespace garantiTakip
                 MessageBox.Show("Kayıt Bulunamadı","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTemizle_Click(object sender, EventArgs e)
+        {
+            txtYetkili.Clear();
+            txtFirmaAd.Clear();
+            txtFirmaKod.Clear();
+            txtSektor.Clear();
+            txtFirmaTip.Clear();
+            txtSehir.Clear();
+            txtTel.Clear();
+            txtTel2.Clear();
+            txtMail.Clear();
+            txtUrl.Clear();
+            txtHizmetTuru.Clear();
+            txtAdresFatura.Clear();
+            txtAdresSevk.Clear();
+            txtIskonto.Clear();
+            txtVergiDaire.Clear();
+            txtVergiNo.Clear();
+            txtParaBirim.Clear();
+            txtYetkiliAd.Clear();
+            txtYetkiliSoyad.Clear();
+            txtYetkiliTel.Clear();
+            txtYetkiliMail.Clear();
+            txtBaslangıcTarih.Text = DateTime.Now.ToString();
+            txtBitisTarih.Text = DateTime.Now.ToString();
+            txtYetkiliDgmTarih.Text = DateTime.Now.ToString();
+            txtKayitTarih.Text = DateTime.Now.ToString();
+            RbAktif.Checked = false;
+            RbPasif.Checked = false;
+
+        }
     }    
             
         

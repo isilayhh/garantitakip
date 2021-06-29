@@ -124,6 +124,21 @@ namespace garantiTakip
         {
             textBox1.Clear();
             textBox2.Clear();
+            txtArama.Clear();
+        }
+
+        private void txtArama_TextChanged(object sender, EventArgs e)
+          
+        {
+
+            dataGridView1.DataSource = db.tbl_sektor.Where(x => x.SEKTORADI.Contains(txtArama.Text) ).ToList();
+        }
+
+        private void txtArama_KeyUp(object sender, KeyEventArgs e)
+
+           
+        {
+            
         }
     }
 }

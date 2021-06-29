@@ -38,6 +38,8 @@ namespace garantiTakip
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtArama = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace garantiTakip
             // 
             // BtnEkle
             // 
-            this.BtnEkle.Location = new System.Drawing.Point(738, 63);
+            this.BtnEkle.Location = new System.Drawing.Point(295, 217);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(75, 31);
             this.BtnEkle.TabIndex = 1;
@@ -67,7 +69,7 @@ namespace garantiTakip
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(367, 119);
+            this.textBox1.Location = new System.Drawing.Point(295, 157);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(274, 28);
             this.textBox1.TabIndex = 2;
@@ -76,7 +78,7 @@ namespace garantiTakip
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 122);
+            this.label1.Location = new System.Drawing.Point(203, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 21);
             this.label1.TabIndex = 3;
@@ -84,7 +86,7 @@ namespace garantiTakip
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(738, 112);
+            this.BtnSil.Location = new System.Drawing.Point(387, 217);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(87, 31);
             this.BtnSil.TabIndex = 4;
@@ -94,7 +96,7 @@ namespace garantiTakip
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(738, 161);
+            this.BtnGuncelle.Location = new System.Drawing.Point(492, 217);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(90, 31);
             this.BtnGuncelle.TabIndex = 5;
@@ -104,7 +106,7 @@ namespace garantiTakip
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(367, 73);
+            this.textBox2.Location = new System.Drawing.Point(295, 111);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(274, 28);
             this.textBox2.TabIndex = 7;
@@ -112,7 +114,7 @@ namespace garantiTakip
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 73);
+            this.label2.Location = new System.Drawing.Point(207, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 21);
             this.label2.TabIndex = 8;
@@ -120,7 +122,7 @@ namespace garantiTakip
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(558, 164);
+            this.button1.Location = new System.Drawing.Point(587, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 28);
             this.button1.TabIndex = 9;
@@ -128,11 +130,31 @@ namespace garantiTakip
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtArama
+            // 
+            this.txtArama.Location = new System.Drawing.Point(57, 9);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.Size = new System.Drawing.Size(146, 28);
+            this.txtArama.TabIndex = 10;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
+            this.txtArama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtArama_KeyUp);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 21);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Ara:";
+            // 
             // FrmSektor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 591);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtArama);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
@@ -164,5 +186,7 @@ namespace garantiTakip
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtArama;
+        private System.Windows.Forms.Label label3;
     }
 }
