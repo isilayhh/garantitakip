@@ -80,12 +80,6 @@ namespace garantiTakip
             }).ToList();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-           
-
-        }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -105,6 +99,11 @@ namespace garantiTakip
                 dataGridView1.DataSource = baglanti.tbl_cari.Where(r => r.ADI.Contains(textBox1.Text) || r.SOYAD.Contains(textBox1.Text) || r.TELEFON1.Contains(textBox1.Text)).ToList();
             }
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

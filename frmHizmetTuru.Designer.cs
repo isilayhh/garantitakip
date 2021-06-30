@@ -59,14 +59,14 @@ namespace garantiTakip
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(392, 76);
+            this.textBox1.Location = new System.Drawing.Point(391, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(177, 28);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(392, 127);
+            this.textBox2.Location = new System.Drawing.Point(392, 124);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(177, 28);
             this.textBox2.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace garantiTakip
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(392, 22);
+            this.textBox3.Location = new System.Drawing.Point(392, 26);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(176, 28);
             this.textBox3.TabIndex = 6;
