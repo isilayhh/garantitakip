@@ -31,7 +31,6 @@ namespace garantiTakip
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnEkle = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSil = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@ namespace garantiTakip
             this.button1 = new System.Windows.Forms.Button();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,14 +66,6 @@ namespace garantiTakip
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.UseVisualStyleBackColor = true;
             this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(295, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 28);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -137,7 +129,7 @@ namespace garantiTakip
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(164, 28);
             this.txtArama.TabIndex = 10;
-            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
+            //this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             this.txtArama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtArama_KeyUp);
             // 
             // label3
@@ -149,11 +141,20 @@ namespace garantiTakip
             this.label3.TabIndex = 11;
             this.label3.Text = "Ara:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(295, 160);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(274, 29);
+            this.comboBox1.TabIndex = 12;
+            // 
             // FrmSektor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 591);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.button1);
@@ -162,7 +163,6 @@ namespace garantiTakip
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnEkle);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -180,7 +180,6 @@ namespace garantiTakip
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnEkle;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.Button BtnGuncelle;
@@ -189,5 +188,6 @@ namespace garantiTakip
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtArama;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

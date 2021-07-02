@@ -24,16 +24,28 @@ namespace garantiTakip
 
         }
 
-        private void FrmSektor_Load(object sender, EventArgs e)
+        public void Listele()
         {
             dataGridView1.DataSource = db.tbl_sektor.Select(x => new { x.IND, x.FIRMANO, x.SEKTORADI }).ToList();
-            
+        }
+        private void FrmSektor_Load(object sender, EventArgs e)
+        {
+
+
+            Listele();
+            foreach (var item in db.tbl_sektor)
+            {
+                comboBox1.Items.Add(item.SEKTORADI);
+
+            }
+
+
         }
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
             tbl_sektor sektor = new tbl_sektor();
-            sektor.SEKTORADI = textBox1.Text;
+            sektor.SEKTORADI = comboBox1.Text;
             db.tbl_sektor.Add(sektor);
             db.SaveChanges();
             MessageBox.Show("Sektör Eklenmiştir");
@@ -54,7 +66,7 @@ namespace garantiTakip
         {
             try
             {
-                if (textBox1 != null)
+                if (comboBox1 != null)
                 {
                     int a = int.Parse(textBox2.Text);
                     var sektoradi = db.tbl_sektor.Where(w => w.IND == a).FirstOrDefault();
@@ -79,34 +91,36 @@ namespace garantiTakip
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+
+           
             
-
-            try
-            {
                 int a = int.Parse(textBox2.Text);
-                if (textBox1 != null)
-                {
+                
                     tbl_sektor guncelle = db.tbl_sektor.Where(x => x.IND == a).FirstOrDefault();
-                    guncelle.SEKTORADI = textBox1.Text;
-                    db.SaveChanges();
-                    MessageBox.Show("Güncellendi");
-                    FrmSektor_Load(sender, e);
+                    
+                    
+                    
 
 
+
+                if (comboBox1.Text == "")
+
+                {
+                    MessageBox.Show("Sektör Adını boş geçmeyin");
+                    return;
                 }
-
                 else
                 {
-                    MessageBox.Show("Kullanıcı Bulunamadı");
+                    guncelle.SEKTORADI = comboBox1.Text;
+                   
                 }
+                db.SaveChanges();
 
-            }
-            catch 
-            {
+                Listele();
 
-                MessageBox.Show("Kullanıcı Bulunamadı");
-            }
-          
+
+           
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -116,28 +130,31 @@ namespace garantiTakip
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            textBox2.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox2.Text = (dataGridView1.CurrentRow.Cells[0].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            comboBox1.Text = (dataGridView1.CurrentRow.Cells[2].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[2].Value.ToString());
+           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            comboBox1.Text = "";
             textBox2.Clear();
             txtArama.Clear();
         }
 
-        private void txtArama_TextChanged(object sender, EventArgs e)
-          
-        {
-
-            dataGridView1.DataSource = db.tbl_sektor.Where(x => x.SEKTORADI.Contains(txtArama.Text) ).ToList();
-        }
+       
+        
 
         private void txtArama_KeyUp(object sender, KeyEventArgs e)
 
-           
         {
+            if (e.KeyCode==Keys.Enter)
+            {
+                dataGridView1.DataSource = db.tbl_sektor.Where(x => x.SEKTORADI.Contains(txtArama.Text)).ToList();
+            }
+            
         }
     }
-}
+    }
+
